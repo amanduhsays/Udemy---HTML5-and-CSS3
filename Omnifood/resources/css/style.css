@@ -1,14 +1,149 @@
+/* ------------------------------ */
+/* BASIC SETUP */
+/* ------------------------------ */
+
 * {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
+    /* Removes global paddings and margins */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 html {
-	background-color: #fff;
-	color: #555;
-	font-family: "Lato", "Arial", sans-serif;
-	font-weight: 300;
-	font-size: 20px;
-	text-rendering: optimizeLegibility;
+    background-color: #fff;
+    color: #555;
+    font-family: "Lato", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ------------------------------ */
+/* REUSEABLE COMPONENTS */
+/* ------------------------------ */
+
+.row {
+    /* From grid.css */
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+/* ---------------- HEADINGS -------------- */
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    /* Relative font size */
+    font-size: 240%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+
+/* ---------------- BUTTONS -------------- */
+
+
+/* <a> element (link(normal state) and visited) have same design */
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    /* Adds transition timing (it's a property within CSS3) */
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #E67E22;
+    border: 1px solid #E67E22;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #E67E22;
+    color: #E67E22;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #CF6D17;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #CF6D17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #CF6D17;
+    color: #fff;
+}
+
+
+/* ------------------------------ */
+/* HEADER */
+/* ------------------------------ */
+
+header {
+    /* Linear gradient goes above the image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hero-text-box {
+    /* Centers the whole box, 1140px is max width of page */
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    /* Translate half of its width and height to the left */
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #CF6D17;
 }
