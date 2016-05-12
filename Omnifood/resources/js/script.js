@@ -99,4 +99,21 @@ $(document).ready(function() {
         }
     })
 
+    /* Maps */
+    var map = new GMaps({
+        div: '.map',
+        lat: -12.043333,
+        lng: -76.91,
+        zoom: 12 /* initial value is 15 */
+    })
+
+    map.addMarker({
+        lat: -12.043333,
+        lng: -77.028333,
+        title: 'Lima',
+        infoWindow: {
+            content: '<p>Our Lisbon HQ</p>'
+        }
+    })
+
 });
